@@ -19,14 +19,14 @@ function RouteComponent() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex items-center justify-center min-h-screen">
       <Card className="w-full max-w-md shadow-lg">
         <CardHeader>
           <CardTitle className="text-center text-2xl font-bold">Reset Password</CardTitle>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit}>
-            <p className="mb-4 text-sm text-gray-600 text-center">
+            <p className="mb-4 text-sm text-gray-400 text-center">
               Enter the OTP sent to your email to reset your password.
             </p>
             <div className="mb-6 flex justify-center">
@@ -50,9 +50,9 @@ function RouteComponent() {
           </form>
         </CardContent>
         <CardFooter className="text-center">
-          <p className="text-sm text-gray-600">
+          <p className="text-sm">
             Didn't receive the code?{' '}
-            <a href="#" className="text-blue-600 hover:underline">
+            <a href="#" className="text-gray-300 hover:underline">
               Resend OTP
             </a>
           </p>

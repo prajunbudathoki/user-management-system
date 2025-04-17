@@ -32,7 +32,7 @@ function RouteComponent() {
   });
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex items-center justify-center min-h-screen">
       <Card className="w-full max-w-md shadow-lg">
         <CardHeader>
           <CardTitle className="text-center text-2xl font-bold">Login</CardTitle>
@@ -48,12 +48,12 @@ function RouteComponent() {
               name="email"
               validators={{
                 onChange: ({ value }) =>
-                  !value ? 'Email is required' : undefined,
+                  !value ? 'Email Field is required' : undefined,
               }}
             >
               {(field) => (
                 <div className="mb-4">
-                  <Label htmlFor={field.name} className="block text-sm font-medium text-gray-700">
+                  <Label htmlFor={field.name} className="block text-sm font-extralight">
                     Email
                   </Label>
                   <Input
@@ -74,12 +74,12 @@ function RouteComponent() {
               name="password"
               validators={{
                 onChange: ({ value }) =>
-                  !value ? 'Password is required' : undefined,
+                  !value ? 'Password Field is required' : undefined,
               }}
             >
               {(field) => (
                 <div className="mb-4">
-                  <Label htmlFor={field.name} className="block text-sm font-medium text-gray-700">
+                  <Label htmlFor={field.name} className="block text-sm font-extralight">
                     Password
                   </Label>
                   <div className="relative flex items-center">
@@ -94,7 +94,7 @@ function RouteComponent() {
                     <button
                       type="button"
                       onClick={() => setShowPassword((prev) => !prev)}
-                      className="absolute right-3 text-gray-500"
+                      className="absolute right-3 "
                     >
                       {showPassword ? <Eye size={20} /> : <EyeOff size={20} />}
                     </button>
@@ -111,8 +111,8 @@ function RouteComponent() {
           </form>
         </CardContent>
         <CardFooter className="flex justify-end font-bold">
-          <p className="text-sm text-gray-600">
-            <Link to="/auth/ForgotPassword" className="text-blue-600 hover:underline">
+          <p className="text-sm">
+            <Link to="/auth/ForgotPassword" className=" text-gray-300 hover:underline">
               Forgot your password?
             </Link>
           </p>

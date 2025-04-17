@@ -29,7 +29,7 @@ function RouteComponent() {
   });
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex items-center justify-center min-h-screen">
       <Card className="w-full max-w-md shadow-lg">
         <CardHeader>
           <CardTitle className="text-center text-2xl font-bold">Forgot Password</CardTitle>
@@ -52,7 +52,7 @@ function RouteComponent() {
             >
               {(field) => (
                 <div className="mb-4">
-                  <Label htmlFor={field.name} className="block text-sm font-medium text-gray-700">
+                  <Label htmlFor={field.name} className="block text-sm font-extralight">
                     Email
                   </Label>
                   <Input
@@ -77,9 +77,9 @@ function RouteComponent() {
           </form>
         </CardContent>
         <CardFooter className="text-center">
-          <p className="text-sm text-gray-600">
+          <p className="text-sm">
             Remembered your password?{' '}
-            <a href="/auth/Login" className="text-blue-600 hover:underline">
+            <a href="/auth/Login" className="text-gray-300 hover:underline">
               Login
             </a>
           </p>
