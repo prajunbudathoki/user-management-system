@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from '@tanstack/react-router';
+import { createFileRoute, Link, useNavigate } from '@tanstack/react-router';
 import { Button } from '@/components/ui/button';
 import { Label } from '@radix-ui/react-label';
 import { Input } from '@/components/ui/input';
@@ -18,6 +18,7 @@ export const Route = createFileRoute('/auth/Login')({
 });
 
 function RouteComponent() {
+  const navigate = useNavigate()
   const [showPassword, setShowPassword] = useState(false);
 
   const form = useForm({
@@ -25,8 +26,8 @@ function RouteComponent() {
       email: '',
       password: '',
     },
-    onSubmit: async ({ value }) => {
-      console.log('loginform submitted:', value);
+    onSubmit: async () => {
+      navigate({ to: '/'})
     },
   });
 
@@ -40,6 +41,7 @@ function RouteComponent() {
           <form
             onSubmit={(e) => {
               e.preventDefault()
+              form.handleSubmit()
             }}
           >
             <form.Field
@@ -62,7 +64,7 @@ function RouteComponent() {
                     onChange={(e) => field.handleChange(e.target.value)}
                     className="mt-1 block w-full"
                   />
-                  {field.state.meta.errors && (
+                  {field.state.meta.errors.length > 0  && (
                     <p className="mt-1 text-sm text-red-600">{field.state.meta.errors}</p>
                   )}
                 </div>
@@ -97,7 +99,7 @@ function RouteComponent() {
                       {showPassword ? <Eye size={20} /> : <EyeOff size={20} />}
                     </button>
                   </div>
-                  {field.state.meta.errors && (
+                  {field.state.meta.errors.length > 0 && (
                     <p className="mt-1 text-sm text-red-600">{field.state.meta.errors[0]}</p>
                   )}
                 </div>

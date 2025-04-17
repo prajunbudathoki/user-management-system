@@ -14,8 +14,8 @@ export const Route = createFileRoute('/auth/ResetLink')({
 
 function RouteComponent() {
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('OTP submitted');
+    e.preventDefault()
+    console.log('OTP submitted')
   };
 
   return (
