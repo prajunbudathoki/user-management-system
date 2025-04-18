@@ -81,12 +81,12 @@ function RouteComponent() {
                 <div className="mb-4">
                   <div className="flex justify-between items-center">
                     <Label htmlFor={field.name} className="block text-sm font-extralight">
-                      {usePhone ? 'Phone Number' : 'Email Address or Username'}
+                      {usePhone ? 'Phone Number' : 'Email Address or Ubername'}
                     </Label>
                     <button
                       type="button"
                       onClick={() => setUsePhone((prev) => !prev)}
-                      className="text-sm text-blue-600 hover:underline"
+                      className="cursor-pointer text-sm text-white hover:underline"
                     >
                       {usePhone ? 'Use Email' : 'Use Phone'}
                     </button>

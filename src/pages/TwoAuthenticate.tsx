@@ -19,7 +19,7 @@ const TwoAuthenticate = () => {
                 </CardHeader>
                 <OTP />
                 <Button type="submit" className="w-full mx-auto">
-                    Continue
+                    Continue ➡
                 </Button>
             </Card>
         </div>

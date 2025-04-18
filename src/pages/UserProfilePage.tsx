@@ -194,7 +194,7 @@ const UserProfile = () => {
                   Google • prajunbudhathoki10@gmail.com
                 </span>
               </div>
-              <Button variant="link" size="sm" className="text-blue-600 mt-2">
+              <Button variant="link" size="sm" className="text-white mt-2">
                 + Connect account
               </Button>
             </div>
