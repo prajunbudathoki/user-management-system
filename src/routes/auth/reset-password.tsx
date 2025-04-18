@@ -8,7 +8,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 
-export const Route = createFileRoute('/auth/ResetLink')({
+export const Route = createFileRoute('/auth/reset-password')({
   component: RouteComponent,
 });
 
